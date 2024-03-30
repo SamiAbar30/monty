@@ -37,28 +37,28 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-extern stack_t *head; // Global variable for the head of the stack or queue
-typedef void (*op_func)(stack_t **, unsigned int); // Function pointer type for operations
+extern stack_t *head; /*Global variable for the head of the stack or queue*/
+typedef void (*op_func)(stack_t **, unsigned int); /*Function pointer type for operations*/
 
-// File handling functions
+/*File handling functions*/
 void open_file(char *file_name);
 void read_file(FILE *);
 int parse_line(char *buffer, int line_number, int format);
 void find_func(char *, char *, int, int);
 
-// Node operations
+/*Node operations*/
 stack_t *create_node(int n);
 void free_nodes(void);
 void add_to_stack(stack_t **, unsigned int);
 void add_to_queue(stack_t **, unsigned int);
 void call_fun(op_func, char *, char *, int, int);
 
-// Error handling functions
+/*Error handling functions*/
 void err(int error_code, ...);
 void more_err(int error_code, ...);
 void string_err(int error_code, ...);
 
-// Stack operations
+/*Stack operations*/
 void print_stack(stack_t **, unsigned int);
 void print_top(stack_t **, unsigned int);
 void pop_top(stack_t **, unsigned int);
