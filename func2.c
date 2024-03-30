@@ -1,9 +1,9 @@
 #include "monty.h"
 
 /**
- * nop - Does nothing.
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * nop - Performs no operation.
+ * @stack: Double pointer to the top node of the stack.
+ * @line_number: Line number of the opcode in the script file.
  */
 void nop(stack_t **stack, unsigned int line_number)
 {
@@ -13,9 +13,9 @@ void nop(stack_t **stack, unsigned int line_number)
 
 
 /**
- * swap_nodes - Swaps the top two elements of the stack.
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * swap_nodes - Exchanges the positions of the top two nodes of the stack.
+ * @stack: Double pointer to the top node of the stack.
+ * @line_number: Line number of the opcode in the script file.
  */
 void swap_nodes(stack_t **stack, unsigned int line_number)
 {
@@ -34,9 +34,9 @@ void swap_nodes(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * add_nodes - Adds the top two elements of the stack.
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * add_nodes - Calculates the sum of the top two nodes' values and stores it in the second node from the top.
+ * @stack: Double pointer to the top node of the stack.
+ * @line_number: Line number of the opcode in the script file.
  */
 void add_nodes(stack_t **stack, unsigned int line_number)
 {
@@ -54,9 +54,9 @@ void add_nodes(stack_t **stack, unsigned int line_number)
 
 
 /**
- * sub_nodes - Adds the top two elements of the stack.
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * sub_nodes - Subtracts the top node's value from the second node's value and stores it in the second node from the top.
+ * @stack: Double pointer to the top node of the stack.
+ * @line_number: Line number of the opcode in the script file.
  */
 void sub_nodes(stack_t **stack, unsigned int line_number)
 {
@@ -76,9 +76,9 @@ void sub_nodes(stack_t **stack, unsigned int line_number)
 
 
 /**
- * div_nodes - Adds the top two elements of the stack.
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * div_nodes - Divides the second node's value by the top node's value and stores the result in the second node from the top.
+ * @stack: Double pointer to the top node of the stack.
+ * @line_number: Line number of the opcode in the script file.
  */
 void div_nodes(stack_t **stack, unsigned int line_number)
 {
