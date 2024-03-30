@@ -1,5 +1,5 @@
 #include "monty.h"
-stack_t *head;
+static stack_t *head;
 
 /**
  * main - The entry point of the program.
